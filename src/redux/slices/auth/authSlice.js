@@ -8,7 +8,6 @@ export const loginUser = createAsyncThunk(
   async (userData, { rejectWithValue }) => {
     try {
       const response = await axios.post(API_URL, userData);
-      // Agar token milta hai toh localStorage mein save karein
       if (response.data.token) {
         localStorage.setItem("token", response.data.token);
       }
@@ -22,8 +21,8 @@ export const loginUser = createAsyncThunk(
 const authSlice = createSlice({
   name: "auth",
   initialState: {
-    user: null,
-    token: localStorage.getItem("doctorToken") || null,
+    user: JSON.parse(localStorage.getItem("user")) || null,
+    token: localStorage.getItem("token") || null,
     loading: false,
     error: null,
   },
@@ -32,6 +31,7 @@ const authSlice = createSlice({
       state.user = null;
       state.token = null;
       localStorage.removeItem("token");
+      localStorage.removeItem("user");
       toast.success("Logout Successfully!",{
         autoClose:1500
       })
@@ -50,6 +50,7 @@ const authSlice = createSlice({
         state.loading = false;
         state.user = action.payload.user;
         state.token = action.payload.token;
+        localStorage.setItem("user", JSON.stringify(action.payload.user));
         toast.success("Login Successfully!",{
           autoClose:1500
         })
