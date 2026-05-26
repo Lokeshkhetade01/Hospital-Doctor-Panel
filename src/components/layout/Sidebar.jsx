@@ -24,7 +24,7 @@ const Sidebar = () => {
     { name: "Appointments", icon: <CalendarDays size={20} />, path: "/appointments" },
     { name: "Prescription History", icon: <PanelTopIcon size={20} />, path: "/prescriptions" },
     { name: "My Patients", icon: <User2Icon size={20} />, path: "/patients" },
-    { name: "Schedule", icon: <PanelTopIcon size={20} />, path: "/schedule" },
+    // { name: "Schedule", icon: <PanelTopIcon size={20} />, path: "/schedule" },
     { name: "My Profile", icon: <UserRoundPlus size={20} />, path: "/profile" },
   ];
 

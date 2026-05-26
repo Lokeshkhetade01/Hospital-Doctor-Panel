@@ -66,11 +66,11 @@ const Dashboard = () => {
   ];
 
   // Table Actions
-  const tableActions = (row) => (
-    <button className="p-2.5 rounded-xl bg-white border border-slate-200 text-slate-400 hover:text-indigo-600 hover:border-indigo-100 hover:bg-indigo-50 transition-all shadow-sm">
-      <ArrowUpRight size={18} />
-    </button>
-  );
+  // const tableActions = (row) => (
+  //   <button className="p-2.5 rounded-xl bg-white border border-slate-200 text-slate-400 hover:text-indigo-600 hover:border-indigo-100 hover:bg-indigo-50 transition-all shadow-sm">
+  //     <ArrowUpRight size={18} />
+  //   </button>
+  // );
 
   // Stats Data
   const statItems = [
@@ -156,7 +156,7 @@ const Dashboard = () => {
             <Table 
               columns={columns} 
               data={upcomingAppointments} 
-              actions={tableActions} 
+              // actions={tableActions} 
             />
           </div>
         </div>
