@@ -144,6 +144,8 @@ const PrescriptionsView = () => {
               </div>
               
               {/* Footer Action */}
+             {/* 
+            
               <div className="bg-slate-50 px-8 py-4 flex justify-between items-center border-t border-slate-100">
                 <span className="text-[10px] font-bold text-slate-400 uppercase">Prescription ID: {item._id}</span>
                 <button 
@@ -158,6 +160,7 @@ const PrescriptionsView = () => {
                   )}
                 </button>
               </div>
+               */}
             </div>
           ))}
           
