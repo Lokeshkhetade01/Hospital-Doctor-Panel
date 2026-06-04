@@ -26,7 +26,7 @@ const Navbar = () => {
     <nav className="h-20 bg-white border-b border-slate-100 px-8 flex items-center justify-between sticky top-0 z-50 shadow-sm">
       {/* 1. Left Side: Search Bar */}
       <div className="flex-1 max-w-md hidden md:block">
-        <h1 className="font-extrabold text-2xl text-blue-800">Admin Panel</h1>
+        <h1 className="font-extrabold text-2xl text-blue-800">Doctor Panel</h1>
       </div>
 
       {/* 2. Right Side: Actions & Profile */}
